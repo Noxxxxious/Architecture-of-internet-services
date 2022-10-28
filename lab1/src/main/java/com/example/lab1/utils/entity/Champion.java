@@ -14,7 +14,6 @@ import java.io.Serializable;
 public class Champion implements Serializable {
     private String name;
     private int priceBE;
-    private int priceRP;
     @ToString.Exclude
     private byte[] splashArt;
 }

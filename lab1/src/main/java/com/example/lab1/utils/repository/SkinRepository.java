@@ -26,6 +26,10 @@ public class SkinRepository implements com.example.lab1.utils.repository.Reposit
         return store.findAllSkins();
     }
 
+    public List<Skin> findByChampion(String name){
+        return store.findSkinsByChampion(name);
+    }
+
     @Override
     public void create(Skin entity) {
         store.createSkin(entity);

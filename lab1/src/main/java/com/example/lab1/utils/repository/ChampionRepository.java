@@ -34,7 +34,7 @@ public class ChampionRepository implements com.example.lab1.utils.repository.Rep
 
     @Override
     public void delete(Champion entity) {
-        throw new UnsupportedOperationException("Operation not implemented.");
+        store.deleteChampion(entity.getName());
     }
 
     @Override

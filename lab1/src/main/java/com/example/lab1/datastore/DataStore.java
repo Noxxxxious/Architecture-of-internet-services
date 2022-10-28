@@ -34,6 +34,11 @@ public class DataStore {
                 .map(CloningUtility::clone);
     }
 
+    public synchronized List<Skin> findSkinsByChampion(String name){
+        return skins.stream()
+                .filter(skin -> skin.getChampion().getName().equals(name)).toList();
+    }
+
     public Optional<Champion> findChampion(String name){
         return champions.stream()
                 .filter(champion -> champion.getName().equals(name))
@@ -50,7 +55,7 @@ public class DataStore {
     }
 
     public synchronized void createChampion(Champion champion) throws IllegalArgumentException{
-        findSkin(champion.getName()).ifPresentOrElse(
+        findChampion(champion.getName()).ifPresentOrElse(
                 original -> {
                     throw new IllegalArgumentException(String.format("The champion name \"%s\" is not unique", champion.getName()));
                 },
@@ -75,6 +80,15 @@ public class DataStore {
                 () -> {
                     throw new IllegalArgumentException(
                             String.format("Skin named \"%s\" does not exist", name));
+                });
+    }
+
+    public synchronized void deleteChampion(String name) throws IllegalArgumentException {
+        findChampion(name).ifPresentOrElse(
+                original -> champions.remove(original),
+                () -> {
+                    throw new IllegalArgumentException(
+                            String.format("Champion named \"%s\" does not exist", name));
                 });
     }
 

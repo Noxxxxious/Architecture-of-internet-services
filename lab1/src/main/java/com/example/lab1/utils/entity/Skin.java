@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Skin implements Serializable {
     private String name;
     private int priceRP;
-    private String tier;
+    private Champion champion;
     @ToString.Exclude
     private byte[] splashArt;
 }

@@ -18,12 +18,16 @@ public class SkinService {
         this.repository = repository;
     }
 
-    public Optional<Skin> find(String address) {
-        return repository.find(address);
+    public Optional<Skin> find(String name) {
+        return repository.find(name);
     }
 
     public List<Skin> findAll() {
         return repository.findAll();
+    }
+
+    public List<Skin> findByChampion(String name) {
+        return repository.findByChampion(name);
     }
 
     public void create(Skin skin) {
@@ -34,7 +38,7 @@ public class SkinService {
         repository.update(skin);
     }
 
-    public void delete(String address) {
-        repository.delete(repository.find(address).orElseThrow());
+    public void delete(String name) {
+        repository.delete(repository.find(name).orElseThrow());
     }
 }
