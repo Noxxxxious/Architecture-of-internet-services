@@ -16,7 +16,7 @@ public class CommandLine implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println();
+        System.out.println("---------------------------------------------");
         skinService.findAll().forEach(System.out::println);
     }
 }

@@ -13,9 +13,8 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class Champion implements Serializable {
     private String name;
-    private String title;
-    private int priceRP;
     private int priceBE;
+    private int priceRP;
     @ToString.Exclude
     private byte[] splashArt;
 }
