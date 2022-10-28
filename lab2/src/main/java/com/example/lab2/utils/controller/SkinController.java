@@ -29,30 +29,43 @@ public class SkinController {
     @GetMapping("{id}")
     public ResponseEntity<GetSkinResponse> getSkin(@PathVariable("id") String id) {
         Optional<Skin> skin = skinService.find(id);
-        return skin.map(value ->
-                ResponseEntity.ok(GetSkinResponse.entityToDtoMapper().apply(value)))
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        return skin
+                .map(value -> ResponseEntity
+                        .ok(GetSkinResponse
+                                .entityToDtoMapper()
+                                .apply(value)))
+                .orElseGet(() -> ResponseEntity
+                        .notFound()
+                        .build());
     }
 
     @GetMapping
     public ResponseEntity<GetSkinsResponse> getSkins() {
-        return ResponseEntity.ok(GetSkinsResponse.entityToDtoMapper().apply(skinService.findAll()));
+        return ResponseEntity.ok(GetSkinsResponse
+                        .entityToDtoMapper()
+                        .apply(skinService.findAll()));
     }
 
     @PostMapping
     public ResponseEntity<Void> createSkin(@RequestBody CreateSkinRequest request, UriComponentsBuilder builder) {
         Skin skin = CreateSkinRequest
-                .dtoToEntityMapper(name -> championService.find(name).orElseThrow())
+                .dtoToEntityMapper(name -> championService
+                        .find(name)
+                        .orElseThrow())
                 .apply(request);
         skin = skinService.create(skin);
-        return ResponseEntity.created(builder.pathSegment("api", "skins", "{id}").buildAndExpand(skin.getAdress()).toUri()).build();
+        return ResponseEntity.created(builder
+                .pathSegment("api", "skins", "{id}")
+                .buildAndExpand(skin.getName()).toUri()).build();
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Void> updateSkin(@RequestBody UpdateSkinRequest request, @PathVariable("id") String id) {
         Optional<Skin> skin = skinService.find(id);
         if (skin.isPresent()) {
-            UpdateSkinRequest.dtoToEntityUpdater().apply(skin.get(), request);
+            UpdateSkinRequest
+                    .dtoToEntityUpdater()
+                    .apply(skin.get(), request);
             skinService.update(skin.get());
             return ResponseEntity.accepted().build();
         } else {
@@ -64,7 +77,7 @@ public class SkinController {
     public ResponseEntity<Void> deleteSkin(@PathVariable("id") String id) {
         Optional<Skin> skin = skinService.find(id);
         if (skin.isPresent()) {
-            skinService.delete(skin.get().getAdress());
+            skinService.delete(skin.get().getName());
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();

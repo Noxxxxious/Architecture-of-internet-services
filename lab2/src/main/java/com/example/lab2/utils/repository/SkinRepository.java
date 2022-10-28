@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface SkinRepository extends JpaRepository<Skin, String> {
-    List<Skin> findAllByOwner(Champion champion);
+    List<Skin> findByChampion(Champion champion);
 }

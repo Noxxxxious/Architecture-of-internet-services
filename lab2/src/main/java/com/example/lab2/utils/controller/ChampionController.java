@@ -28,13 +28,21 @@ public class ChampionController {
     @GetMapping("{id}")
     public ResponseEntity<GetChampionResponse> getChampion(@PathVariable("id") String id) {
         Optional<Champion> champion = championService.find(id);
-        return champion.map(value -> ResponseEntity.ok(GetChampionResponse.entityToDtoMapper().apply(value)))
-                .orElseGet(() -> ResponseEntity.notFound().build());
+        return champion
+                .map(value -> ResponseEntity
+                        .ok(GetChampionResponse
+                                .entityToDtoMapper()
+                                .apply(value)))
+                .orElseGet(() -> ResponseEntity
+                        .notFound()
+                        .build());
     }
 
     @GetMapping
     public ResponseEntity<GetChampionsResponse> getChampions() {
-        return ResponseEntity.ok(GetChampionsResponse.entityToDtoMapper().apply(championService.findAll()));
+        return ResponseEntity.ok(GetChampionsResponse
+                .entityToDtoMapper()
+                .apply(championService.findAll()));
     }
 
     @PostMapping
@@ -43,15 +51,31 @@ public class ChampionController {
                 .dtoToEntityMapper()
                 .apply(request);
         champion = championService.create(champion);
-        return ResponseEntity.created(builder.pathSegment("api", "champions", "{id}").buildAndExpand(champion.getName()).toUri()).build();
+        return ResponseEntity.created(builder
+                .pathSegment("api", "champions", "{id}")
+                .buildAndExpand(champion.getName()).toUri()).build();
     }
 
     @PutMapping("{id}")
     public ResponseEntity<Void> updateSkin(@RequestBody UpdateChampionRequest request, @PathVariable("id") String id) {
         Optional<Champion> champion = championService.find(id);
         if (champion.isPresent()) {
-            UpdateChampionRequest.dtoToEntityUpdater().apply(champion.get(), request);
+            UpdateChampionRequest
+                    .dtoToEntityUpdater()
+                    .apply(champion.get(), request);
             championService.update(champion.get());
+            return ResponseEntity.accepted().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteSkin(@PathVariable("id") String id) {
+        Optional<Champion> champion = championService.find(id);
+        if (champion.isPresent()) {
+            skinService.findAll(champion.get()).forEach(skin -> skinService.delete(skin.getName()));
+            championService.delete(champion.get().getName());
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();

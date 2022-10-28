@@ -13,19 +13,18 @@ import java.util.function.Function;
 @ToString
 @Builder
 @EqualsAndHashCode
-public class CreateSkinRequest {
+public class GetSkinResponse {
     private String name;
     private int priceRP;
     private Champion champion;
-    @ToString.Exclude
     private byte[] splashArt;
 
-    public static Function<CreateSkinRequest, Skin> dtoToEntityMapper(Function<String, Champion> championFunc){
-        return request -> Skin.builder()
-                .name(request.getName())
-                .priceRP(request.getPriceRP())
-                .champion(championFunc.apply(request.getChampion().getName()))
-                .splashArt(request.getSplashArt())
+    public static Function<Skin, GetSkinResponse> entityToDtoMapper() {
+        return skin -> GetSkinResponse.builder()
+                .name(skin.getName())
+                .priceRP(skin.getPriceRP())
+                .champion(skin.getChampion())
+                .splashArt(skin.getSplashArt())
                 .build();
     }
 }

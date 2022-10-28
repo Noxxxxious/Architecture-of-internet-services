@@ -1,7 +1,6 @@
 package com.example.lab2.utils.dto;
 
 import com.example.lab2.utils.entity.Champion;
-import com.example.lab2.utils.entity.Skin;
 import lombok.*;
 
 import java.util.function.Function;
@@ -13,18 +12,16 @@ import java.util.function.Function;
 @ToString
 @Builder
 @EqualsAndHashCode
-public class CreateSkinRequest {
+public class CreateChampionRequest {
     private String name;
-    private int priceRP;
-    private Champion champion;
+    private int priceBE;
     @ToString.Exclude
     private byte[] splashArt;
 
-    public static Function<CreateSkinRequest, Skin> dtoToEntityMapper(Function<String, Champion> championFunc){
-        return request -> Skin.builder()
+    public static Function<CreateChampionRequest, Champion> dtoToEntityMapper() {
+        return request -> Champion.builder()
                 .name(request.getName())
-                .priceRP(request.getPriceRP())
-                .champion(championFunc.apply(request.getChampion().getName()))
+                .priceBE(request.getPriceBE())
                 .splashArt(request.getSplashArt())
                 .build();
     }

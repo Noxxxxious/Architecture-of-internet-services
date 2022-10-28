@@ -5,11 +5,13 @@ import com.example.lab2.utils.repository.ChampionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ChampionService {
+
     private ChampionRepository repository;
 
     @Autowired
@@ -22,14 +24,22 @@ public class ChampionService {
     }
 
     public Optional<Champion> find(String name) {
-        return repository.find(name);
+        return repository.findById(name);
     }
 
+    @Transactional
     public Champion create(Champion champion) {
-        repository.create(champion);
+        return repository.save(champion);
     }
 
+    @Transactional
     public void delete(String name) {
-        repository.delete(repository.find(name).orElseThrow());
+        repository.deleteById(name);
     }
+
+    @Transactional
+    public void update(Champion champion){
+        repository.save(champion);
+    }
+
 }
