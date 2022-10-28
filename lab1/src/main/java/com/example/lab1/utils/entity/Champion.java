@@ -1,19 +1,21 @@
-package com.example.lab1;
+package com.example.lab1.utils.entity;
 
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString
+@Builder
+@EqualsAndHashCode
 public class Champion implements Serializable {
     private String name;
     private String title;
     private int priceRP;
     private int priceBE;
-    private List<Skin> skins;
+    @ToString.Exclude
+    private byte[] splashArt;
 }
