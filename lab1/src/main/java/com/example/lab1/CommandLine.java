@@ -38,6 +38,14 @@ public class CommandLine implements CommandLineRunner {
                 case "c" -> championService.findAll().forEach(System.out::println);
                 case "x" -> System.exit(0);
                 case "h" -> printOpts();
+                case "f" -> {
+                    System.out.println("Name: ");
+                    String findName = scanner.nextLine();
+                    List<Skin> result = skinService.findByChampion(findName);
+                    for(Skin skin : result){
+                        System.out.println(skin);
+                    }
+                }
                 case "+s" -> {
                     insertSkin();
                 }
@@ -132,14 +140,15 @@ public class CommandLine implements CommandLineRunner {
     }
 
     public void printOpts() {
-        System.out.println("+---------------------------------------+");
-        System.out.println("|-----------------Opts------------------|");
-        System.out.println("|s     - prints all skins               |");
-        System.out.println("|c     - prints all champions           |");
-        System.out.println("|+s/+c - adds a new skin/champion       |");
-        System.out.println("|-s/-c - removes existing skin/champion |");
-        System.out.println("|x     - exits the program              |");
-        System.out.println("|h     - prints available commands.     |");
-        System.out.println("+---------------------------------------+");
+        System.out.println("+------------------------------------------+");
+        System.out.println("|-------------------Opts-------------------|");
+        System.out.println("|s     - prints all skins                  |");
+        System.out.println("|c     - prints all champions              |");
+        System.out.println("|f     - prints all skins of one champion  |");
+        System.out.println("|+s/+c - adds a new skin/champion          |");
+        System.out.println("|-s/-c - removes existing skin/champion    |");
+        System.out.println("|x     - exits the program                 |");
+        System.out.println("|h     - prints available commands.        |");
+        System.out.println("+------------------------------------------+");
     }
 }

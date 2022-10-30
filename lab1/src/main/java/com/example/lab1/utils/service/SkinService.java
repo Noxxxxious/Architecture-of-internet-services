@@ -34,10 +34,6 @@ public class SkinService {
         repository.create(skin);
     }
 
-    public void update(Skin skin) {
-        repository.update(skin);
-    }
-
     public void delete(String name) {
         repository.delete(repository.find(name).orElseThrow());
     }
