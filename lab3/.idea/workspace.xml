@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b33a44f2-afca-4b83-9394-add6935e02f4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../auii-compressed.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/Lab3ChampionApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/config/Initializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/controller/ChampionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/dto/CreateChampionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/dto/GetChampionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/dto/GetChampionsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/dto/UpdateChampionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/entity/Champion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/repository/ChampionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils/service/ChampionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_champion/src/test/java/com/example/lab3_champion/Lab3ChampionApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/src/main/java/com/example/lab3_gateway/Lab3GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_gateway/src/test/java/com/example/lab3_gateway/Lab3GatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/Lab3SkinApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/config/Initializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/controller/ChampionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/controller/ChampionSkinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/controller/SkinController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/dto/CreateChampionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/dto/CreateSkinRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/dto/GetSkinResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/dto/GetSkinsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/dto/UpdateSkinRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/entity/Champion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/entity/Skin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/repository/ChampionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/repository/SkinRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/service/ChampionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/java/com/example/lab3_skin/utils/service/SkinService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab3_skin/src/test/java/com/example/lab3_skin/Lab3SkinApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab2/src/main/java/com/example/lab2/utils/controller/ChampionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/src/main/java/com/example/lab2/utils/controller/ChampionController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2HixfMWeSD9BZEA2XoNejX4Qfj3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lab3_champion/src/main/java/com/example/lab3_champion/utils" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\Desktop\sem5\AUI\lab3\lab3_champion\src\main\java\com\example\lab3_champion\utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\Desktop\sem5\AUI\lab3\lab3_champion\src\main\java\com\example\lab3_champion\utils" />
+      <recent name="C:\Users\micha\Desktop\sem5\AUI\lab3\lab3_champion\src\main\java\com\example\lab3_champion" />
+      <recent name="C:\Users\micha\Desktop\sem5\AUI\lab3\lab3_champion\src\main\java\com\example\lab3_champion\things" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/lab3_gateway" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b33a44f2-afca-4b83-9394-add6935e02f4" name="Default Changelist" comment="" />
+      <created>1668781814013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668781814013</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
