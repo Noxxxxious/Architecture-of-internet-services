@@ -1,10 +1,8 @@
-package com.example.lab2.utils.controller;
+package com.example.lab3_champion.utils.controller;
 
-import com.example.lab2.utils.dto.*;
-import com.example.lab2.utils.entity.Skin;
-import com.example.lab2.utils.entity.Champion;
-import com.example.lab2.utils.service.SkinService;
-import com.example.lab2.utils.service.ChampionService;
+import com.example.lab3_champion.utils.dto.*;
+import com.example.lab3_champion.utils.entity.Champion;
+import com.example.lab3_champion.utils.service.ChampionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -15,13 +13,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping("api/champions")
 public class ChampionController {
-
-    private SkinService skinService;
     private ChampionService championService;
 
     @Autowired
-    public ChampionController(SkinService skinService, ChampionService championService) {
-        this.skinService = skinService;
+    public ChampionController(ChampionService championService) {
         this.championService = championService;
     }
 
@@ -56,26 +51,23 @@ public class ChampionController {
                 .buildAndExpand(champion.getName()).toUri()).build();
     }
 
-    @PutMapping("{id}")
-    public ResponseEntity<Void> updateSkin(@RequestBody UpdateChampionRequest request, @PathVariable("id") String id) {
+    @DeleteMapping("{id}")
+    public ResponseEntity<Void> deleteChampion(@PathVariable("id") String id) {
         Optional<Champion> champion = championService.find(id);
         if (champion.isPresent()) {
-            UpdateChampionRequest
-                    .dtoToEntityUpdater()
-                    .apply(champion.get(), request);
-            championService.update(champion.get());
+            championService.delete(champion.get().getName());
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();
         }
     }
 
-    @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteChampion(@PathVariable("id") String id) {
+    @PutMapping("{id}")
+    public ResponseEntity<Void> updateChampion(@RequestBody UpdateChampionRequest request, @PathVariable("id") String id) {
         Optional<Champion> champion = championService.find(id);
         if (champion.isPresent()) {
-            skinService.findAll(champion.get()).forEach(skin -> skinService.delete(skin.getName()));
-            championService.delete(champion.get().getName());
+            UpdateChampionRequest.dtoToEntityUpdater().apply(champion.get(), request);
+            championService.update(champion.get());
             return ResponseEntity.accepted().build();
         } else {
             return ResponseEntity.notFound().build();
