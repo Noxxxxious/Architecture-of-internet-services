@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Skin gallery</title>
+        <script type="module" src="champion_add.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Skin gallery</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                    <li><a href="../champion_list/champion_list.html">champions</a></li>
+                    <li><a href="../farm_list/farm_list.html">farms</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Add champion info</h2></header>
+                    <form class="champion__form" id="infoForm">
+                        <label for="name">Name:</label>
+                        <input class="ui-control ui-input" id="name" name="name"/>
+                        <br>
+                        <label for="priceBE">PriceBE:</label>
+                        <input class="ui-control ui-input" id="priceBE" name="priceBE"/>
+                        <br>
+                        <input class="ui-control ui-button" type="submit" name="Update"/>
+                    </form>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p></p>
+            </footer>
+        </div>
+    </body>
+</html>

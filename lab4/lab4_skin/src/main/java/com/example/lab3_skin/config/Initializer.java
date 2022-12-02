@@ -31,7 +31,7 @@ public class Initializer {
 
         Skin vi_skin1 = Skin.builder().name("PsyOps Vi").priceRP(1350).champion(vi).splashArt(null).build();
         Skin vi_skin2 = Skin.builder().name("Neon Strike Vi").priceRP(975).champion(vi).splashArt(null).build();
-        Skin zac_skin1 = Skin.builder().name("SKT T1 Zac ").priceRP(1350).champion(zac).splashArt(null).build();
+        Skin zac_skin1 = Skin.builder().name("SKT T1 Zac").priceRP(1350).champion(zac).splashArt(null).build();
         Skin taliyah_skin1 = Skin.builder().name("Freljord Taliyah").priceRP(1350).champion(taliyah).splashArt(null).build();
         Skin nidalee_skin1 = Skin.builder().name("Leopard Nidalee").priceRP(520).champion(nidalee).splashArt(null).build();
         Skin nidalee_skin2 = Skin.builder().name("Challenger Nidalee").priceRP(975).champion(nidalee).splashArt(null).build();

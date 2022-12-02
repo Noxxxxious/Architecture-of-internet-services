@@ -38,7 +38,7 @@ public class ChampionSkinController {
     @GetMapping("{id}")
     public ResponseEntity<GetSkinResponse> getSkin(@PathVariable("champion") String name,
                                                    @PathVariable("id") String id) {
-        return skinService.find(name)
+        return skinService.find(id)
                 .map(value -> ResponseEntity.ok(GetSkinResponse.entityToDtoMapper().apply(value)))
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }

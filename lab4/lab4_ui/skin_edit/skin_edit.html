@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Skin gallery</title>
+        <script type="module" src="skin_edit.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Skin gallery</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                    <li><a href="../champion_list/champion_list.html">champions</a></li>
+                    <li><a href="../skin_list/skin_list.html">skins</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Edit skin info</h2></header>
+                    <form class="skin__form" id="infoForm">
+                        <label for="name">Name:</label>
+                        <input class="ui-control ui-input" id="name" name="name"/>
+                        <br>
+                        <label for="priceRP">PriceRP:</label>
+                        <textarea class="ui-control" id="priceRP" name="priceRP" type="number"></textarea>
+                        <br>
+                        <input class="ui-control ui-button" type="submit" name="Update"/>
+                    </form>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p></p>
+            </footer>
+        </div>
+    </body>
+</html>
