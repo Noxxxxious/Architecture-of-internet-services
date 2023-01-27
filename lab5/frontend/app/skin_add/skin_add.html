@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Skin gallery</title>
-        <script type="module" src="champion_add.js" defer="defer"></script>
+        <script type="module" src="skin_add.js" defer="defer"></script>
     </head>
     <body>
         <div class="container">
@@ -21,13 +21,15 @@
 
             <section class="main-section">
                 <article class="text--justified">
-                    <header><h2>Add champion info</h2></header>
-                    <form class="champion__form" id="infoForm">
+                    <header><h2>Add skin info</h2></header>
+                    <form class="skin__form" id="infoForm">
                         <label for="name">Name:</label>
                         <input class="ui-control ui-input" id="name" name="name"/>
                         <br>
-                        <label for="priceBE">PriceBE:</label>
-                        <input class="ui-control ui-input" id="priceBE" name="priceBE"/>
+                        <label for="priceRP">PriceRP:</label>
+                        <input class="ui-control ui-input" id="priceRP" name="priceRP"/>
+                        <label for="champion">Champion:</label>
+                        <input class="ui-control ui-input" id="champion" name="champion" readonly/>
                         <br>
                         <input class="ui-control ui-button" type="submit" name="Update"/>
                     </form>

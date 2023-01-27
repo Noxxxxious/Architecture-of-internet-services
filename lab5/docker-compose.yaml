@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  gateway:
+    build:
+      context: backend/lab4_gateway
+      dockerfile: Dockerfile
+    depends_on:
+      champion:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+  skin:
+    build:
+      context: backend/lab4_skin
+      dockerfile: Dockerfile
+    healthcheck: &healthcheck
+      test: "curl --fail --silent localhost:8082/actuator/health | grep UP || exit 1"
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
+  champion:
+    build:
+      context: backend/lab4_champion
+      dockerfile: Dockerfile
+    healthcheck:
+      <<: *healthcheck
+      test: "curl --fail --silent localhost:8081/actuator/health | grep UP || exit 1"
+    depends_on:
+      skin:
+        condition: service_healthy
+  reverse_proxy:
+    build:
+      context: .
+      dockerfile: ./reverse_proxy/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      gateway:
+        condition: service_started
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile

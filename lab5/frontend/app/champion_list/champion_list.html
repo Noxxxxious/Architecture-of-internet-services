@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Skin gallery</title>
+        <script type="module" src="champion_list.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Skin gallery</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                    <li><a href="champion_list.html">champions</a></li>
+                    <li><a href="../skin_list/skin_list.html">skins</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>champions</h2></header>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>name</th>
+                                <th>view</th>
+                                <th>delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>name</td>
+                                <td><a href="#">view</a></td>
+                                <td><a href="#">edit</a></td>
+                                <td>
+                                    <button class="ui-button ui-control">delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <a href="../champion_add/champion_add.html">add champion</a>
+                <p></p>
+            </footer>
+        </div>
+    </body>
+</html>
